@@ -28,12 +28,12 @@ Los usuarios deben poder:
 
 ### Captura de pantalla
 
-![Vista Desktop](./screenshot.jpg)
+![Vista Desktop](./src/assets/images/screenshot.jpg)
 
 ### Enlaces
 
 - URL de la solución: [Frontend Mentor](https://your-solution-url.com)
-- URL del sitio en vivo: [Demo en vivo](https://your-live-site-url.com)
+- URL del sitio en vivo: [Demo en vivo](https://fancy-melba-7b1280.netlify.app/)
 
 ## Mi proceso
 
@@ -172,5 +172,5 @@ npm run dev
 
 ## Autor
 
-- Frontend Mentor - [@tuusuario](https://www.frontendmentor.io/profile/tuusuario)
-- GitHub - [@tuusuario](https://github.com/tuusuario)
+- Frontend Mentor - [@Oliver-92](https://www.frontendmentor.io/profile/Oliver-92)
+- GitHub - [@Oliver-92](https://github.com/Oliver-92)
