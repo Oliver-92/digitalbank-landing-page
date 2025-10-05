@@ -32,7 +32,7 @@ Los usuarios deben poder:
 
 ### Enlaces
 
-- URL de la solución: [Frontend Mentor](https://your-solution-url.com)
+- URL de la solución: [Frontend Mentor](https://www.frontendmentor.io/solutions/digitalbank-landing-page-with-react-05NmWZp71n)
 - URL del sitio en vivo: [Demo en vivo](https://fancy-melba-7b1280.netlify.app/)
 
 ## Mi proceso
