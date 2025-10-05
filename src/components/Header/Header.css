@@ -1,0 +1,233 @@
+/* Mobile-first Header styles */
+.header {
+  position: relative;
+  width: 100%;
+  background: var(--color-white);
+  padding: 1.25rem 1.5rem;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  z-index: 102;
+}
+
+.header__logo img {
+  height: 20px;
+  width: auto;
+}
+
+/* Desktop navigation - hidden on mobile */
+.header__nav {
+  display: none;
+}
+
+.header__links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header__links li a {
+  color: var(--color-gray-600);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 1.75rem;
+}
+
+.header__links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-green-500), var(--color-cyan-400));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.header__links li a:hover {
+  color: var(--color-blue-950);
+}
+
+.header__links li a:hover::after {
+  opacity: 1;
+}
+
+/* CTA Button - hidden on mobile */
+.header__cta {
+  display: none;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.header__cta:hover {
+  opacity: 0.7;
+}
+
+/* Mobile menu toggle button */
+.header__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 102;
+}
+
+.header__toggle img {
+  width: 24px;
+  height: auto;
+}
+
+/* Mobile menu overlay (backdrop) */
+.header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(45, 49, 77, 0.9), transparent);
+  z-index: 98;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile menu panel */
+.header__mobile-menu {
+  position: fixed;
+  top: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 3rem);
+  max-width: 400px;
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  z-index: 101;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.header__mobile-menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__mobile-menu nav ul li a {
+  color: var(--color-blue-950);
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-regular);
+  transition: color 0.2s ease;
+}
+
+.header__mobile-menu nav ul li a:hover {
+  color: var(--color-gray-600);
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+  .header {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .header__logo img {
+    height: 24px;
+  }
+
+  .header__nav {
+    display: block;
+  }
+
+  .header__cta {
+    display: inline-block;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__mobile-menu,
+  .header__overlay {
+    display: none !important;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .header {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .header__container {
+    max-width: var(--container-max-width-desktop);
+  }
+
+  .header {
+    padding: 1.25rem 10rem;
+  }
+
+  .header__logo img {
+    height: 30px;
+  }
+
+  .header__links li a {
+    font-size: var(--font-size-text-desktop);
+  }
+
+  .header__cta {
+    font-size: var(--font-size-text-desktop);
+  }
+}

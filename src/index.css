@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --color-blue-950: hsl(233, 26%, 24%);
+  --color-green-500: hsl(136, 64%, 51%);
+  --color-cyan-400: hsl(192, 69%, 51%);
+
+  --color-gray-600: hsl(233, 8%, 62%);
+  --color-gray-100: hsl(220, 16%, 96%);
+  --color-gray-50: hsl(0, 0%, 98%);
+  --color-white: hsl(0, 100%, 100%);
+
+  --gradient-primary: linear-gradient(90deg, var(--color-green-500), var(--color-cyan-400));
+
+  /* Typography */
+  --font-size-body: 18px;
+  --font-size-text-desktop: clamp(0.775rem, 1.12vw, 1.3rem);
+  --font-size-title-desktop: min(3.889vw, 4.0625rem);
+  --font-family-base: 'Public Sans', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Container */
+  --container-max-width: 1200px;
+  --container-max-width-desktop: 90%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  color: var(--color-blue-950);
+  background-color: var(--color-gray-50);
+}
